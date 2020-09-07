@@ -7,11 +7,11 @@ const ObjectId = require('mongodb').ObjectID;
 
 const MongoClient = require('mongodb').MongoClient;
 
-const uri = "mongodb+srv://admin:admin@crudnode.iyhug.mongodb.net/CRUDNode";
+const uri = "mongodb+srv://admin:<password>@crudnode.iyhug.mongodb.net/<dbname>";
 
 MongoClient.connect(uri, (err, client) => {
     if (err) return console.log(err);
-    db = client.db('CRUDNode');
+    db = client.db('<dbname>');
 
     app.listen(3000, () => {
         console.log('server running on port 3000');
